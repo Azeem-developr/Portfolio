@@ -54,6 +54,12 @@ main {
   cursor: context-menu;
 }
 
+@keyframes toast {
+  0% {
+    right: -100px;
+  }
+}
+
 header {
   width: 100%;
   height: 13vh;
