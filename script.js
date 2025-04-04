@@ -118,7 +118,6 @@ function responsive() {
         }, 700);
       } else {
         document.querySelector(".mbl-nav").style.display = "block";
-        console.log(123);
         document.querySelector("#menu i").classList.remove("fa-bars");
         document.querySelector("#menu i").classList.add("fa-xmark");
         gsap.to(".mbl-nav", {
@@ -132,7 +131,6 @@ function responsive() {
     Array.from(document.querySelectorAll(".mbl-nav>ul>li")).forEach((li) => {
       li.addEventListener("click", () => {
         document.querySelector(".mbl-nav").style.display = "none";
-        console.log("123");
         document.querySelector("#menu i").classList.remove("fa-xmark");
         document.querySelector("#menu i").classList.add("fa-bars");
         gsap.to(".mbl-nav", {
@@ -163,6 +161,8 @@ function responsive() {
   }
 }
 responsive();
+
+window.addEventListener("resize", responsive);
 
 function gsapAnimation() {
   const tl = gsap.timeline()
