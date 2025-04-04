@@ -53,9 +53,9 @@ function showToast(txt) {
   let toast = document.createElement("h6");
   toast.classList.add("toast");
   toast.innerText = txt;
-  document.body.prepend(toast);
+  document.querySelector("main").prepend(toast);
   setTimeout(() => {
-    document.body.removeChild(toast);
+    document.querySelector("main").removeChild(document.querySelector(".toast"));
   }, 3000);
 }
 
